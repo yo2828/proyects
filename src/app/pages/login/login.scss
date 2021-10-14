@@ -11,3 +11,7 @@
 .list {
   margin-bottom: 0;
 }
+
+.item-has-focus .ht-imput-title{
+  --ion-color-primary: var(--ion-color-secondary-shade) !important;
+}

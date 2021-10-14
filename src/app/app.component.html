@@ -4,12 +4,13 @@
     <ion-menu contentId="main-content">
       <ion-content>
         <ion-list lines="none">
-          <ion-list-header>
-            Conference
+          <ion-list-header class="ht-menu-title">
+            Tools
           </ion-list-header>
+
           <ion-menu-toggle autoHide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item [routerLink]="p.url" routerLinkActive="selected" routerDirection="root" detail="false">
-              <ion-icon slot="start" [name]="p.icon + '-outline'"></ion-icon>
+            <ion-item [routerLink]="p.url" routerLinkActive="selected" routerDirection="root" detail="false" class="ht-menu-content">
+              <ion-icon slot="start" [name]="p.icon + '-outline'"  class="ht-menu-content"></ion-icon>
               <ion-label>
                 {{p.title}}
               </ion-label>
@@ -18,12 +19,12 @@
           </ion-menu-toggle>
         </ion-list>
 
-        <ion-list *ngIf="loggedIn" lines="none">
-          <ion-list-header>
+        <ion-list  lines="none">
+          <ion-list-header class="ht-menu-title">
             Account
           </ion-list-header>
 
-          <ion-menu-toggle autoHide="false">
+          <ion-menu-toggle *ngIf="loggedIn" autoHide="false">
             <ion-item routerLink="/account" routerLinkActive="active" routerDirection="root" detail="false">
               <ion-icon slot="start" name="person"></ion-icon>
               <ion-label>
@@ -32,16 +33,7 @@
             </ion-item>
           </ion-menu-toggle>
 
-          <ion-menu-toggle autoHide="false">
-            <ion-item routerLink="/support" routerLinkActive="active" routerDirection="root" detail="false">
-              <ion-icon slot="start" name="help"></ion-icon>
-              <ion-label>
-                Support
-              </ion-label>
-            </ion-item>
-          </ion-menu-toggle>
-
-          <ion-menu-toggle autoHide="false">
+          <ion-menu-toggle *ngIf="loggedIn" autoHide="false">
             <ion-item button (click)="logout()" detail="false">
               <ion-icon slot="start" name="log-out"></ion-icon>
               <ion-label>
@@ -50,18 +42,20 @@
             </ion-item>
           </ion-menu-toggle>
 
-        </ion-list>
-
-        <ion-list *ngIf="!loggedIn" lines="none">
-          <ion-list-header>
-            Account
-          </ion-list-header>
-
-          <ion-menu-toggle autoHide="false">
+          <ion-menu-toggle *ngIf="!loggedIn" autoHide="false">
             <ion-item routerLink="/login" routerLinkActive="active" routerDirection="root" detail="false">
               <ion-icon slot="start" name="log-in"></ion-icon>
               <ion-label>
                 Login
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle *ngIf="!loggedIn" autoHide="false">
+            <ion-item routerLink="/signup" routerLinkActive="active" routerDirection="root" detail="false">
+              <ion-icon slot="start" name="person-add"></ion-icon>
+              <ion-label>
+                Signup
               </ion-label>
             </ion-item>
           </ion-menu-toggle>
@@ -71,15 +65,6 @@
               <ion-icon slot="start" name="help"></ion-icon>
               <ion-label>
                 Support
-              </ion-label>
-            </ion-item>
-          </ion-menu-toggle>
-
-          <ion-menu-toggle autoHide="false">
-            <ion-item routerLink="/signup" routerLinkActive="active" routerDirection="root" detail="false">
-              <ion-icon slot="start" name="person-add"></ion-icon>
-              <ion-label>
-                Signup
               </ion-label>
             </ion-item>
           </ion-menu-toggle>
@@ -94,7 +79,7 @@
         </ion-list>
 
         <ion-list lines="none">
-          <ion-list-header>
+          <ion-list-header class="ht-menu-title">
             Tutorial
           </ion-list-header>
           <ion-menu-toggle autoHide="false">

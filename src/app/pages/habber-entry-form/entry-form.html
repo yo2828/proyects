@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>Manual entry</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #loginForm="ngForm" novalidate>
+    <ion-list>
+      <ion-item [hidden]="desktop">
+        <ion-label color="secondary" class="ht-imput-title">Select Date</ion-label>
+        <ion-input type="datetime-local"></ion-input>
+      </ion-item>
+      <ion-item [hidden]="desktop">
+        <ion-label color="secondary" class="ht-imput-title">Select date</ion-label>
+        <ion-datetime displayFormat="D MM YYYY H:mm" placeholder="Select Date"></ion-datetime>
+      </ion-item>
+
+      <ion-text color="danger">
+        <p [hidden]="true" class="ion-padding-start">
+          Choose a valid hour
+        </p>
+      </ion-text>
+    </ion-list>
+
+    <ion-row>
+      <ion-col>
+        <ion-button color="light" expand="block">Reset</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button type="submit" expand="block">Send</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

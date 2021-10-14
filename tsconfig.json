@@ -9,9 +9,9 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es2015",
+    "target": "esnext",
     "lib": [
-      "es2017",
+      "esnext",
       "dom"
     ]
   }

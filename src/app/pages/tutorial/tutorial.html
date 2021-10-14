@@ -1,7 +1,7 @@
 <ion-header no-border>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-buttons slot="end">
-      <ion-button color='primary' (click)="startApp()" [hidden]="!showSkip">Skip</ion-button>
+      <ion-button (click)="startApp()" [hidden]="!showSkip">Skip</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -9,38 +9,33 @@
 <ion-content fullscreen="true">
   <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager="false">
     <ion-slide>
-      <img src="assets/img/ica-slidebox-img-1.png" class="slide-image" />
-      <h2 class="slide-title">
-        Welcome to
-        <b>ICA</b>
-      </h2>
-      <p>
-        The
-        <b>ionic conference app</b> is a practical preview of the ionic framework in action, and a demonstration of proper code
-        use.
-      </p>
+      <img src="assets/img/transparent-habber.png" class="slide-image"/>
+      <h2 class="slide-title">Brand</h2>
+      <p>Mobile apps offer the unique opportunity for brand reinforcement through a new channel.</p>
     </ion-slide>
 
     <ion-slide>
-      <img src="assets/img/ica-slidebox-img-2.png" class="slide-image" />
-      <h2 class="slide-title">What is Ionic?</h2>
-      <p>
-        <b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies
-        like HTML, CSS, and JavaScript.</p>
+      <img src="assets/img/transparent-habber.png" class="slide-image" />
+      <h2 class="slide-title">Loyalty</h2>
+      <p>Mobile apps work to consistently increase customer loyalty.</p>
     </ion-slide>
 
     <ion-slide>
-      <img src="assets/img/ica-slidebox-img-3.png" class="slide-image" />
-      <h2 class="slide-title">What is Ionic Appflow?</h2>
-      <p>
-        <b>Ionic Appflow</b> is a powerful set of services and features built on top of Ionic Framework that brings a totally new
-        level of app development agility to mobile dev teams.</p>
+      <img src="assets/img/transparent-habber.png" class="slide-image" />
+      <h2 class="slide-title">Accesibility</h2>
+      <p> Mobile apps allow users to have easy, functional access to information, products, services and processes that they need in real-time and are optimized for hands on interaction. </p>
     </ion-slide>
 
     <ion-slide>
-      <img src="assets/img/ica-slidebox-img-4.png" class="slide-image" />
-      <h2 class="slide-title">Ready to Play?</h2>
-      <ion-button fill="clear" (click)="startApp()">
+      <img src="assets/img/transparent-habber.png" class="slide-image" />
+      <h2 class="slide-title">Increase sell-through</h2>
+      <p>Recent analysis suggests that mobile app users spend more time on a company's mobile app, then they spend on the company's mobile website.</p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/transparent-habber.png" class="slide-image" />
+      <h2 class="slide-title">Get your own app!</h2>
+      <ion-button fill="clear" (click)="startApp()" class="ht-continue-button">
         Continue
         <ion-icon slot="end" name="arrow-forward"></ion-icon>
       </ion-button>

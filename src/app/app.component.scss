@@ -85,3 +85,11 @@ ion-menu.ios ion-item ion-icon {
 ion-menu.ios ion-item.selected ion-icon {
   color: var(--ion-color-primary);
 }
+
+.ht-menu-title{
+  color: var(--ion-color-secondary-shade) !important;
+}
+
+ion-item.selected.ht-menu-content, ion-item.selected .ht-menu-content{
+  color: var(--ion-color-secondary-tint) !important;
+}
