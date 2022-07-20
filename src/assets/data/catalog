@@ -1,0 +1,74 @@
+{
+  "products":[
+    {
+      "id":1,
+      "categorie":"br",
+      "name":"Kid bedroom 1",
+      "price":"1000€/month",
+      "image":""
+    },
+    {
+      "id":2,
+      "categorie":"br",
+      "name":"Modern Bedroom",
+      "price":"1000€/month",
+      "image":""
+    },
+    {
+      "id":3,
+      "categorie":"lr",
+      "name":"Oldschool living room",
+      "price":"1000€/month",
+      "image":""
+    },
+    {
+      "id":4,
+      "categorie":"lr",
+      "name":"Modern living room",
+      "price":"1000€/month",
+      "image":""
+    },
+    {
+      "id":5,
+      "categorie":"lr",
+      "name":"Classic livingroom",
+      "price":"1000€/month",
+      "image":""
+    },
+    {
+      "id":6,
+      "categorie":"kt",
+      "name":"Modern Kitchen",
+      "price":"1000€/month",
+      "image":""
+    },
+    {
+      "id":7,
+      "categorie":"kt",
+      "name":"Classic kitchen",
+      "price":"1000€/month",
+      "image":""
+    },
+    {
+      "id":8,
+      "categorie":"bt",
+      "name":"Classic bathroom",
+      "price":"1000€/month",
+      "image":""
+    },
+    {
+      "id":9,
+      "categorie":"bt",
+      "name":"Modern bathroom",
+      "price":"1000€/month",
+      "image":""
+    },
+    {
+      "id":10,
+      "categorie":"bt",
+      "name":"Futuristic bathroom",
+      "price":"1000€/month",
+      "image":""
+    }
+  ]
+}

@@ -56,4 +56,35 @@ export class UserData {
       return value;
     });
   }
+
+  addToCart(cart): any {
+    return this.storage.get('cart').then((value) => {
+      let auxCart=value || [];
+      auxCart.push(cart);
+
+      return this.storage.set('cart', auxCart);
+    });
+  }
+
+  setCart(cart): any {
+    return this.storage.set('cart', cart);
+  }
+
+  getCart(): any {
+    return this.storage.get('cart').then((value) => {
+      return value;
+    });
+  }
+
+  cleanCart(): any {
+    return this.storage.set('cart', []);
+  }
+
+  deleteCartItem(index) {
+    return this.storage.get('cart').then((value) => {
+      value.splice(index, 1);
+
+      return this.storage.set('cart', value);
+    });
+  }
 }

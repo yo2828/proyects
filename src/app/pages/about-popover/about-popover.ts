@@ -5,13 +5,13 @@ import { PopoverController } from '@ionic/angular';
 @Component({
   template: `
     <ion-list>
-      <ion-item button (click)="close('https://habber.com/')">
+      <ion-item button (click)="close('https://Wooden_Crate.com/')">
         <ion-label>Web page</ion-label>
       </ion-item>
-      <ion-item button (click)="close('https://es.linkedin.com/company/habber-tec')">
+      <ion-item button (click)="close('https://es.linkedin.com/company/Wooden_Crate')">
         <ion-label>Linkedin</ion-label>
       </ion-item>
-      <ion-item button (click)="close('https://twitter.com/habbertec?lang=es')">
+      <ion-item button (click)="close('https://twitter.com/Wooden_Crate?lang=es')">
         <ion-label>Twitter</ion-label>
       </ion-item>
       <ion-item button routerLink="/support" routerLinkActive="active" routerDirection="root" detail="false" (click)="support()">

@@ -20,18 +20,23 @@ import { UserData } from './providers/user-data';
 export class AppComponent implements OnInit {
   appPages = [
     {
-      title: 'Entry list',
-      url: '/app/tabs/entry-list',
+      title: 'Home',
+      url: '/home',
+      icon: 'home'
+    },
+    {
+      title: 'Catalog',
+      url: '/catalog',
       icon: 'list'
     },
     {
-      title: 'Manual entry',
-      url: '/app/tabs/entry-form',
-      icon: 'clipboard'
+      title: 'Cart',
+      url: '/cart',
+      icon: 'cart'
     },
     {
       title: 'About',
-      url: '/app/tabs/about',
+      url: '/about',
       icon: 'information-circle'
     }
   ];
@@ -112,7 +117,7 @@ export class AppComponent implements OnInit {
 
   logout() {
     this.userData.logout().then(() => {
-      return this.router.navigateByUrl('/app/tabs/basic');
+      return this.router.navigateByUrl('/home');
     });
   }
 

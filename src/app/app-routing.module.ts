@@ -13,6 +13,31 @@ const routes: Routes = [
     loadChildren: () => import('./pages/account/account.module').then(m => m.AccountModule)
   },
   {
+    path: 'home',
+    loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
+  },
+  {
+    path: 'catalog',
+    loadChildren: () => import('./pages/catalog/catalog.module').then(m => m.CatalogModule)
+  },
+  {
+    path: 'confirm',
+    loadChildren: () => import('./pages/confirm/confirm.module').then(m => m.ConfirmPageModule)
+  },{
+    path: 'item-details/:id',
+    loadChildren: () => import('./pages/item-details/item-details.module').then(m => m.ItemDetailsPageModule)
+  },{
+    path: 'cart',
+    loadChildren: () => import('./pages/my-cart/my-cart.module').then(m => m.MyCartPageModule)
+  },{
+    path: 'checkout',
+    loadChildren: () => import('./pages/checkout/checkout.module').then(m => m.CheckoutPageModule)
+  },
+  {
+    path: 'about',
+    loadChildren: () => import('./pages/about/about.module').then(m => m.AboutModule)
+  },
+  {
     path: 'support',
     loadChildren: () => import('./pages/support/support.module').then(m => m.SupportModule)
   },
@@ -23,10 +48,6 @@ const routes: Routes = [
   {
     path: 'signup',
     loadChildren: () => import('./pages/signup/signup.module').then(m => m.SignUpModule)
-  },
-  {
-    path: 'app',
-    loadChildren: () => import('./pages/tabs-page/tabs-page.module').then(m => m.TabsModule)
   },
   {
     path: 'tutorial',

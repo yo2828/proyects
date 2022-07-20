@@ -1,0 +1,57 @@
+<ion-content>
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="about-header">
+    <div class="about-image woodenCrate" ></div>
+  </div>
+
+  
+  <div class="search ion-padding">
+    <ion-item lines="none">
+      <ion-input placeholder="Search Your Product"></ion-input>
+      <ion-icon name="search-outline" slot="start"></ion-icon>
+    </ion-item>
+  </div>
+  
+  <div class='scroll'>
+    <div class="title ion-padding">
+      <h2>Categories</h2>
+      <p routerLink="/catalog">See all</p>
+    </div>
+
+    <div class="category-slider ion-padding-start">
+      <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
+        <ion-slide *ngFor="let category of categories">
+          <ion-col routerLink="/catalog">
+            <h4>{{ category.name }}</h4>
+            <img src="{{ category.image }}" />
+          </ion-col>
+        </ion-slide>
+      </ion-slides>
+    </div>
+
+    <div class="title ion-padding">
+      <h2>Best sold</h2>
+      <p routerLink="/catalog">See all</p>
+    </div>
+
+    <div class="product-slider ion-padding-start">
+      <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
+        <ion-slide *ngFor="let product of bestSold">
+          <ion-col class="ion-text-left" routerLink="/item-details/{{product.id}}" routerDirection="forward">
+            <img src="{{ product.image }}" />
+            <p>{{ product.price }}</p>
+            <h6>{{ product.name }}</h6>
+          </ion-col>
+        </ion-slide>
+      </ion-slides>
+    </div>
+  </div>
+
+</ion-content>

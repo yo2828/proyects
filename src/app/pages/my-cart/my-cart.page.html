@@ -1,0 +1,48 @@
+<ion-content fullscreen="true">
+  <ion-header class="ion-no-border unwrap">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="about-header">
+    <div class="about-image woodenCrate" ></div>
+  </div>
+  <div class='list'>
+    <h1 class="title">Cart</h1>
+
+    <div class="cart-items">
+      <ion-card mode="ios" *ngFor="let item of cart">
+        <ion-card-content>
+          <div class="item-img">
+            <img src="{{item.image}}" />
+          </div>
+
+          <div class="item-info">
+            <p>{{item.name}}</p>
+            <p>{{item.price}}</p>
+
+            <div class="qty-selector">
+              <h2>Months</h2>
+              <ion-button fill="clear" (click)='changeItem(item.id, item.subDuration-1)'>-</ion-button>
+              <ion-label>{{item.subDuration}}</ion-label>
+              <ion-button fill="clear" (click)='changeItem(item.id, item.subDuration+1)'>+</ion-button>
+            </div>
+          </div>
+          <div class='iconDiv'>
+            <ion-icon name="trash-outline" slot="end" color='primary' (click)='removeItem(item.id)'></ion-icon>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>
+<ion-footer translucent="true" class="ion-no-border" mode="md">
+  <ion-toolbar color="translucent">
+    <ion-button expand="block" class="main-button" routerLink="/checkout" routerDirection="forward">Continue</ion-button>
+    <ion-button expand="block" class="main-button" (click)='cleanCart()' routerDirection="forward">Clean Cart</ion-button>
+  </ion-toolbar>
+</ion-footer>
+

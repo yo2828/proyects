@@ -1,0 +1,69 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+  
+
+  <img src="{{itemData.image}}" />
+
+  <div class="ion-padding-vertical">
+    <h1 class="item-name">{{itemData.name}}</h1>
+
+    <h4 class="price">
+      {{itemData.price}}
+    </h4>
+  </div>
+
+  <div class="seperator">
+    <hr>
+  </div>
+
+  <div class="review">
+    <ion-row>
+      <ion-col size="6">
+        <div class="rating">
+          4.5
+        </div>
+
+        Very Good
+      </ion-col>
+      <ion-col size="6">
+        <div class="count">49 Reviews</div>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div class="seperator">
+    <hr>
+  </div>
+
+  <div class="description">
+    <h5>Description</h5>
+
+    <p>
+      A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.
+    </p>
+
+  </div>
+  <ion-item class="address">
+    <ion-label position="fixed">Subscription duration</ion-label>
+    <ion-button fill="clear" (click)='changeItem(itemData.subDuration-1)'>-</ion-button>
+    {{itemData.subDuration}} month
+    <ion-button fill="clear" (click)='changeItem(itemData.subDuration+1)'>+</ion-button>
+  </ion-item>
+</ion-content>
+<ion-footer>
+  <ion-row>
+    <ion-col size="6">
+      <ion-button expand="full" color="light" (click)='addToCart(itemData)'>Add to cart</ion-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button expand="full" (click)='buyNow(itemData)'>Buy now</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

@@ -1,0 +1,59 @@
+ion-toolbar {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  --background: transparent;
+  --color: white;
+}
+
+ion-toolbar ion-button,
+ion-toolbar ion-back-button,
+ion-toolbar ion-menu-button {
+  --color: white;
+}
+
+.about-header {
+  position: relative;
+
+  width: 100%;
+  height: 30%;
+}
+
+.about-header .about-image {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.about-header .woodenCrate {
+  background-image: url(/assets/img/woodenCrate.png);
+}
+
+.ht-title-label{
+  color: var(--ion-color-secondary) !important;
+}
+
+ion-list{
+  display: -webkit-box;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+  height: 70%;
+}
+
+.cardImage{
+  width: 300px;
+  height: 150px;
+}

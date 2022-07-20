@@ -12,7 +12,8 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { FormsModule } from '@angular/forms';
-
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 @NgModule({
   imports: [
     BrowserModule,
